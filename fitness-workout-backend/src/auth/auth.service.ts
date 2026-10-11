@@ -113,6 +113,7 @@ export class AuthService {
       user: {
         userId: user.userId,
         name: user.name,
+        role : user.role,
       },
     };
   } catch (error) {
