@@ -5,6 +5,7 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { ExercisesModule } from './exercises/exercises.module';
 import { WorkoutsModule } from './workouts/workouts.module';
+import { WorkoutSetsModule } from './workout-sets/workout-sets.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { WorkoutsModule } from './workouts/workouts.module';
     AuthModule,
     ExercisesModule,
     WorkoutsModule,
+    WorkoutSetsModule,
   ],
 
 })

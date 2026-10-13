@@ -25,3 +25,9 @@ export class WorkoutExercise {
 
 export const WorkoutExerciseSchema =
   SchemaFactory.createForClass(WorkoutExercise);
+
+// Same exercise cannot be added twice to one workout.
+WorkoutExerciseSchema.index(
+  { workoutId: 1, exerciseId: 1 },
+  { unique: true },
+);
