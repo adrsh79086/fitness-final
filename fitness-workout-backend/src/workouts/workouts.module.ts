@@ -1,4 +1,3 @@
-
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { JwtModule } from '@nestjs/jwt';
@@ -17,6 +16,11 @@ import {
   WorkoutExerciseSchema,
 } from './schemas/workout-exercise.schema';
 
+import {
+  Exercise,
+  ExerciseSchema,
+} from '../exercises/schemas/exercise.schema';
+
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';
 
@@ -27,6 +31,10 @@ import { RolesGuard } from '../auth/guards/roles.guard';
       {
         name: WorkoutExercise.name,
         schema: WorkoutExerciseSchema,
+      },
+      {
+        name: Exercise.name,
+        schema: ExerciseSchema,
       },
     ]),
     JwtModule.registerAsync({
