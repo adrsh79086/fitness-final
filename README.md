@@ -125,41 +125,6 @@ Open the local URL shown in the terminal, usually:
 
 `http://localhost:5173`
 
-## Main API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/auth/register` | Register a user |
-| POST | `/auth/login` | Login |
-| GET | `/exercises` | Get active exercises |
-| POST | `/exercises` | Create an exercise |
-| PATCH | `/exercises/:exerciseId` | Update an exercise |
-| DELETE | `/exercises/:exerciseId` | Deactivate an exercise |
-| GET | `/workouts` | Get workouts |
-| POST | `/workouts` | Create a workout |
-| GET | `/workouts/:workoutId` | Get workout details |
-| PATCH | `/workouts/:workoutId` | Update a workout |
-| DELETE | `/workouts/:workoutId` | Delete a workout |
-| POST | `/workout-sets` | Save a workout set |
-| GET | `/workout-sets/:workoutId` | Get workout sets |
-| PATCH | `/workout-sets/:workoutSetId` | Update a workout set |
-| DELETE | `/workout-sets/:workoutSetId` | Delete a workout set |
-
-Protected endpoints require a valid JWT access token in the `Authorization` header:
-
-```http
-Authorization: Bearer YOUR_ACCESS_TOKEN
-```
-
-## Environment Variables
-
-| Variable | Purpose |
-|---|---|
-| `PORT` | Backend server port |
-| `MONGODB_URI` | MongoDB connection string |
-| `JWT_SECRET` | Secret used for JWT signing |
-| `VITE_API_URL` | Backend API URL used by frontend |
-
 Never commit your `.env` files or real credentials to GitHub.
 
 ## Future Improvements
